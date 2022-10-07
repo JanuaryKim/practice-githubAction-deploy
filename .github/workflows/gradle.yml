@@ -17,7 +17,7 @@ permissions:
   contents: read
 
 env:
-  S3_BUCKET_NAME: be-21-JanuaryKim
+  S3_BUCKET_NAME: githubAction-CodeDeploy-Role
 
 
 jobs:
@@ -52,4 +52,4 @@ jobs:
 
       # 압축한 프로젝트를 S3로 전송합니다.
     - name: Upload to S3
-      run: aws s3 cp --region ap-northeast-2 ./practice-deploy.zip s3://githubAction-CodeDeploy-Role/practice-deploy.zip
+      run: aws s3 cp --region ap-northeast-2 ./practice-deploy.zip s3://$S3_BUCKET_NAME/practice-deploy.zip

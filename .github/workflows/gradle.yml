@@ -58,7 +58,7 @@ jobs:
 
     - name: Code Deploy
       run: >
-        aws deploy create-deployment --application-name be-21-januarykim
+        aws deploy create-deployment --application-name be-21-JanuaryKim
          --deployment-config-name CodeDeployDefault.AllAtOnce
-         --deployment-group-name be-21-januarykim-group
-         --s3-location bucket=be-21-januarykim,bundleType=zip,key=practice-deploy.zip
+         --deployment-group-name be-21-JanuaryKim-group
+         --s3-location bucket=$S3_BUCKET_NAME,bundleType=zip,key=practice-deploy.zip
